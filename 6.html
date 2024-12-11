@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>옷 색 변경</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/6.css">
+</head>
+<body>
+<a href="index.html" class="back-btn"></a>
+
+
+
+
+<div class="characterContainer">
+    <!-- 캐릭터 1 -->
+    <div class="character">
+        <img id="fullBodyImage1" class="sourceImage" src="img/옷모델1.png" alt="전신 이미지 1" width="500" height="700">
+        <img id="pantsImage1" class="sourceImage" src="img/옷변경1.png" alt="바지 이미지 1" width="500" height="700">
+        <div class="canvasWrapper">
+            <canvas id="canvas1" width="500" height="700"></canvas>
+        </div>
+        <div class="colorPickerWrapper">
+            <input type="color" id="pantsColorPicker1" value="#FED8C8"> <!-- 기본 색 지정 -->
+        </div>
+    </div>
+
+
+
+    <!-- 캐릭터 2 -->
+    <div class="character">
+        <img id="fullBodyImage2" class="sourceImage" src="img/옷모델2.png" alt="전신 이미지 2" width="500" height="700">
+        <img id="pantsImage2" class="sourceImage" src="img/옷변경2.png" alt="바지 이미지 2" width="500" height="700">
+        <div class="canvasWrapper">
+            <canvas id="canvas2" width="500" height="700"></canvas>
+        </div>
+        <div class="colorPickerWrapper">
+            <input type="color" id="pantsColorPicker2" value="#FFE5F1">
+        </div>
+    </div>
+
+
+
+    <!-- 캐릭터 3 -->
+    <div class="character">
+        <img id="fullBodyImage3" class="sourceImage" src="img/옷모델3.png" alt="전신 이미지 3" width="500" height="700">
+        <img id="pantsImage3" class="sourceImage" src="img/옷변경3.png" alt="바지 이미지 3" width="500" height="700">
+        <div class="canvasWrapper">
+            <canvas id="canvas3" width="500" height="700"></canvas>
+        </div>
+        <div class="colorPickerWrapper">
+            <input type="color" id="pantsColorPicker3" value="#BBADA5">
+        </div>
+    </div>
+</div>
+
+
+
+<script src="js/6.js"></script>
+
+
+
+</body>
+</html>

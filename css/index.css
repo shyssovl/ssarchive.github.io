@@ -1,0 +1,143 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background: url("../img/배경땡떙이알록달록노랑.png");
+}
+
+.title {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 60px;
+
+}
+.title span {
+    display: inline-block;
+    animation: floating-right 2s infinite ease-in-out;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 200px;
+    transform: translateY(150px);
+}
+
+/* 버튼 이미지 스타일 */
+.grid-container a img {
+    width: 150px;
+    height: 150px;
+    transition: 0.3s ease;
+}
+
+
+#button1 img:hover {
+    content: url('../img/메인버튼1호버.png');
+}
+#button2 img:hover {
+    content: url('../img/메인버튼2호버.png');
+}
+#button3 img:hover {
+    content: url('../img/메인버튼3호버.png');
+}
+#button4 img:hover {
+    content: url('../img/메인버튼4호버.png');
+}
+#button5 img:hover {
+    content: url('../img/메인버튼5호버.png');
+}
+#button6 img:hover {
+    content: url('../img/메인버튼6호버.png');
+}
+#button7 img:hover {
+    content: url('../img/메인버튼7호버.png');
+}
+#button8 img:hover {
+    content: url('../img/메인버튼8호버.png');
+}
+#button9 img:hover {
+    content: url('../img/메인버튼9호버.png');
+}
+
+/* 왼쪽으로 까딱거리는 버튼 */
+.grid-container a:nth-child(1) img,
+.grid-container a:nth-child(2) img,
+.grid-container a:nth-child(3) img,
+.grid-container a:nth-child(7) img,
+.grid-container a:nth-child(8) img,
+.grid-container a:nth-child(9) img {
+    animation: floating-left 2s infinite ease-in-out;
+}
+
+@keyframes floating-left {
+    0%, 100% {
+        transform: rotate(-8deg);
+    }
+    50% {
+        transform: rotate(8deg);
+    }
+}
+
+/* 오른쪽으로 까딱거리는 버튼 */
+.grid-container a:nth-child(4) img,
+.grid-container a:nth-child(5) img,
+.grid-container a:nth-child(6) img {
+    animation: floating-right 2s infinite ease-in-out;
+}
+
+@keyframes floating-right {
+    0%, 100% {
+        transform: rotate(8deg);
+    }
+    50% {
+        transform: rotate(-8deg);
+    }
+}
+
+/* 캐릭터 애니메이션 */
+.box1 {
+    position: absolute;
+    top: -600px;
+    left: 50px;
+    width: 360px;
+    height: 600px;
+    background: url("../img/메인사람애니1.png") no-repeat;
+    background-size: cover;
+    animation: gif 1s infinite steps(8), run 5s linear infinite;
+}
+
+@keyframes gif {
+    100% {background-position: -2880px 0}
+}
+
+@keyframes run {
+    0% {top: -600px;}
+    100% {top: 100%;}
+}
+
+.box2 {
+    position: absolute;
+    bottom: -600px;
+    right: 50px;
+    width: 360px;
+    height: 600px;
+    background: url("../img/메인사람애니2.png") no-repeat;
+    background-size: cover;
+    animation: gif2 1s infinite steps(8), run2 5s linear infinite;
+}
+
+@keyframes gif2 {
+    100% {background-position: -2880px 0}
+}
+
+@keyframes run2 {
+    0% {bottom: -600px;}
+    100% {bottom: 100%;}
+}

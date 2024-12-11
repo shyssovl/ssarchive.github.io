@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타로</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/3.css">
+
+</head>
+
+
+
+
+<body>
+<a href="index.html" class="back-btn"></a>
+
+<h1>한 장의 카드를 선택하여 어릴 적 소현이의 꿈을 확인해보세요</h1>
+<div class="tarot-container">
+    <div class="card" onclick="drawTarot(this)"></div>
+    <div class="card" onclick="drawTarot(this)"></div>
+    <div class="card" onclick="drawTarot(this)"></div>
+    <div class="card" onclick="drawTarot(this)"></div>
+    <div class="card" onclick="drawTarot(this)"></div>
+    <div class="card" onclick="drawTarot(this)"></div>
+</div>
+
+<div id="result-modal">
+    <div id="result-modal-content">
+        <div id="result-card"></div>
+        <div id="result-text"></div>
+        <button class="close-btn" onclick="closeResult()">닫기</button>
+    </div>
+</div>
+
+
+<script src="js/3.js"></script>
+</body>
+</html>

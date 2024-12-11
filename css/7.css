@@ -1,0 +1,181 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: url("../img/배경리본.png");
+}
+.box {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-image: url('../img/닫힌상자1.png');
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-image 0.2s ease-in-out;
+}
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/모달강아지.png");
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal h1 {
+    font-size: 3rem;
+    margin-top: 30px;
+    font-weight: 300;
+}
+
+.box1 {
+    position: absolute;
+    bottom: -400px;
+    width: 300px;
+    height: 300px;
+    background: url("../img/블러하트.png") no-repeat;
+    background-size: cover;
+    animation: heartMove1 3s ease-out infinite;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+.box2 {
+    position: absolute;
+    bottom: -400px;
+    width: 300px;
+    height: 300px;
+    background: url("../img/블러하트.png") no-repeat;
+    background-size: cover;
+    animation: heartMove2 3s ease-out infinite;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+
+
+.box1 {
+    left: 10%;
+}
+
+.box2 {
+    right: 10%;
+}
+
+@keyframes heartMove1 {
+    0% {
+        bottom: 0;
+        opacity: 0;
+        transform: translateX(0) scale(1);
+    }
+    10% {
+        opacity: .5;
+        transform: translateX(-50px) scale(0.9);
+    }
+    20% {
+        opacity: .5;
+        transform: translateX(-100px) scale(0.8);
+    }
+    30% {
+        opacity: .5;
+        transform: translateX(-50px) scale(0.7);
+    }
+    40% {
+        opacity: .5;
+        transform: translateX(0) scale(0.6);
+    }
+    50% {
+        opacity: .5;
+        transform: translateX(50px) scale(0.5);
+    }
+    60% {
+        opacity: .5;
+        transform: translateX(100px) scale(0.4);
+    }
+    70% {
+        opacity: .5;
+        transform: translateX(50px) scale(0.3);
+    }
+    80% {
+        opacity: .5;
+        transform: translateX(0) scale(0.2);
+    }
+    90% {
+        opacity: .5;
+        transform: translateX(-50px) scale(0.1);
+    }
+    100% {
+        bottom: 80%;
+        opacity: 0;
+        transform: translateX(-100px) scale(0);
+    }
+}
+@keyframes heartMove2 {
+    0% {
+        bottom: 0;
+        opacity: 0;
+        transform: translateX(0) scale(1);
+    }
+    10% {
+        opacity: .5;
+        transform: translateX(50px) scale(0.9);
+    }
+    20% {
+        opacity: .5;
+        transform: translateX(100px) scale(0.8);
+    }
+    30% {
+        opacity: .5;
+        transform: translateX(50px) scale(0.7);
+    }
+    40% {
+        opacity: .5;
+        transform: translateX(0) scale(0.6);
+    }
+    50% {
+        opacity: .5;
+        transform: translateX(-50px) scale(0.5);
+    }
+    60% {
+        opacity: .5;
+        transform: translateX(-100px) scale(0.4);
+    }
+    70% {
+        opacity: .5;
+        transform: translateX(-50px) scale(0.3);
+    }
+    80% {
+        opacity: .5;
+        transform: translateX(0) scale(0.2);
+    }
+    90% {
+        opacity: .5;
+        transform: translateX(50px) scale(0.1);
+    }
+    100% {
+        bottom: 80%;
+        opacity: 0;
+        transform: translateX(100px) scale(0);
+    }
+}

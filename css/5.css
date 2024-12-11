@@ -1,0 +1,46 @@
+body {
+    background: url("../img/배경파랑별.png");
+}
+
+/* 애니메이션 박스 */
+.ani-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 700px;
+    background: url("../img/카제하야애니.png");
+    background-size: cover;
+    animation: none;
+}
+
+@keyframes gif {
+    100% {background-position: -5000px 0;} /* 전체 크기 */
+}
+
+@keyframes alternateGif {
+    100% {background-position: -5500px 0;}
+}
+
+
+/* 말풍선 */
+#text {
+    visibility: hidden;
+    position: absolute;
+    background: url('../img/2-말풍선.png') no-repeat;
+    background-size: contain;
+    background-position: center 11px;
+
+    padding: 20px;
+    top: 120px;
+    left: 70%;
+    transform: translate(0, -50%);
+    white-space: nowrap;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}

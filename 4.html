@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>일기장</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/4.css">
+
+</head>
+
+<body>
+<a href="index.html" class="back-btn"></a>
+
+<div id="book">
+    <!-- 왼쪽 페이지 -->
+    <div class="page left-page" id="leftPage">
+        <!-- Left Page -->
+    </div>
+
+    <!-- 넘길 오른쪽 페이지들 -->
+    <div class="page right-page" id="rightPage1" style="z-index: 5;"></div>
+    <div class="page right-page" id="rightPage2" style="z-index: 4;"></div>
+    <div class="page right-page" id="rightPage3" style="z-index: 3;"></div>
+    <div class="page right-page" id="rightPage4" style="z-index: 2;"></div>
+    <div class="page right-page" id="rightPage5" style="z-index: 1;"></div>
+
+    <!-- 넘긴 페이지 뒷면 -->
+    <div class="page back-page" id="backPage1" style="z-index: 0; transform: rotateY(180deg);"></div>
+    <div class="page back-page" id="backPage2" style="z-index: 0; transform: rotateY(180deg);"></div>
+    <div class="page back-page" id="backPage3" style="z-index: 0; transform: rotateY(180deg);"></div>
+    <div class="page back-page" id="backPage4" style="z-index: 0; transform: rotateY(180deg);"></div>
+    <div class="page back-page" id="backPage5" style="z-index: 0; transform: rotateY(180deg);"></div>
+
+    <!-- 이전과 다음 버튼 -->
+    <button id="prev" disabled> </button>
+    <button id="next"> </button>
+</div>
+
+
+<script src="js/4.js"></script>
+
+</body>
+</html>

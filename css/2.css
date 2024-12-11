@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/배경다이어리.png");
+}
+
+canvas {
+    border: 1px solid #d5a0e1;
+    background: #fff;
+    /*margin-top: 5px;*/
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.controls label {
+    margin-right: 10px;
+}
+.controls > div {
+    margin-right: 30px; /* 각 컨트롤 간의 간격 */
+}
+
+#handImage {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    pointer-events: none;
+    transform: translate(-5%, -40%);
+    z-index: 2;
+}
+
+#crayonImage {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    pointer-events: none;
+    transform: translate(-5%, -40%);
+    z-index: 1;
+}
+
+
+#saveButton {
+    width: 60px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+#saveButton:hover {
+    content: url('../img/저장버튼.png');
+    transform: scale(1.1);
+}

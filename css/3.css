@@ -1,0 +1,102 @@
+body {
+    text-align: center;
+    background: url("../img/배경구름하트.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: floatingBackground 7s infinite ease-in-out;
+}
+
+@keyframes floatingBackground {
+    0%, 100% {
+        background-position: center 0;
+    }
+    50% {
+        background-position: center -45px; /* 위로 45px */
+    }
+}
+
+h1 {
+    margin-bottom: 60px;
+    color: #5b2b51;
+    font-weight: 300;
+}
+
+.tarot-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 한 줄에 카드 6개 */
+    gap: 20px;
+    justify-items: center;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background-image: url('../img/타로뒷면.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+    border: 2px solid #a892b9;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+#result-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+#result-modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+}
+
+#result-card {
+    width: 400px;
+    height: 500px;
+    margin-bottom: 20px;
+    background-size: cover;
+    border: 1px solid #5b2b51;
+    border-radius: 10px;
+}
+#result-text h2 {
+    margin-bottom: 16px;
+    color: #5b2b51;
+}
+
+#result-text p {
+    margin-top: 0;
+    color: #5b2b51;
+}
+
+
+.close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #ffaee8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: #ff96e0;
+}

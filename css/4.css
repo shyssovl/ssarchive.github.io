@@ -1,0 +1,138 @@
+body {
+    background: url("../img/배경스트라이프하트.png");
+}
+#book {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1120px;
+    height: 640px;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%);
+    perspective: 2500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    position: absolute;
+    width: 560px;
+    height: 100%;
+
+    /*border: 1px solid #ccc;*/
+    backface-visibility: hidden;
+    transform-origin: right;
+    transition: transform 1s ease;
+}
+
+.left-page {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+
+.right-page {
+    position: absolute;
+    right: 0;
+    transform-origin: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-page {
+    position: absolute;
+    right: 0;
+    transform-origin: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+
+/* 버튼 스타일 */
+button {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background-image 0.3s ease;
+}
+
+#prev {
+    left: -120px;
+    background-image: url("../img/일기장하트버튼.png");
+}
+
+#next {
+    right: -120px;
+    background-image: url("../img/일기장하트버튼.png");
+}
+
+
+#prev:hover {
+    background-image: url("../img/일기장이전버튼호버.png");
+}
+
+#next:hover {
+    background-image: url("../img/일기장다음버튼호버.png");
+}
+
+/* 비활성화된 버튼 */
+button:disabled {
+    cursor: not-allowed;
+}
+
+
+
+/* 버튼 흔들리는 애니메이션 */
+@keyframes sway {
+    0%{
+        transform: translateY(-50%) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-50%) rotate(-10deg);
+    }
+    75% {
+        transform: translateY(-50%) rotate(10deg);
+    }
+    100% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+}
+
+/* 애니메이션 적용 */
+#prev, #next {
+    animation: sway 1.5s infinite ease-in-out;
+}
+
+
+#leftPage {
+    background: url("../img/일기장표지.png");
+}
+#rightPage1 {
+    background: url("../img/일기장1.png");
+}
+#rightPage2 {
+    background: url("../img/일기장2.png");
+}
+#rightPage3 {
+    background: url("../img/일기장3.png");
+}
+#rightPage4 {
+    background: url("../img/일기장4.png");
+}
+#rightPage5 {
+    background: url("../img/일기장5.png");
+}
